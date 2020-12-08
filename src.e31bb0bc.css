@@ -38,6 +38,46 @@ ul {
   margin: 0;
 }
 
+#button {
+  display: inline-block;
+  background-color: #ffb8ca;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+#button::after {
+  content: "⇧";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #e17992;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 0.5;
+  visibility: visible;
+}
+
 p {
   margin: 0;
 }
@@ -52,7 +92,7 @@ h3 {
   margin: 0 auto;
   width: 100%;
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 320px;
     padding: 0 20px;
@@ -66,13 +106,14 @@ h3 {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1280px;
-    padding: 0 115px;
+    width: 1130px;
+    padding: 0 40px;
   }
 }
 
 .logo {
   margin-right: 55px;
+  display: inline-flex;
 }
 
 .button {
@@ -523,15 +564,19 @@ h3 {
 }
 
 .page__header {
-  background: #ffb8ca;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
 }
 
 .container-header {
   padding-right: 20px;
   padding-left: 20px;
+  width: 100%;
   position: relative;
   padding-top: 6px;
   padding-bottom: 0px;
+  display: block;
 }
 
 .button-buy {
@@ -554,6 +599,8 @@ h3 {
 }
 
 .button-svg {
+  width: 20px;
+  height: 12px;
   cursor: pointer;
   position: absolute;
   left: 90%;
@@ -631,7 +678,7 @@ h3 {
   top: 44%;
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .container-header {
     max-width: 480px;
     margin: 0 auto;
@@ -671,7 +718,7 @@ h3 {
   .button--tablet {
     position: absolute;
     left: 75%;
-    top: 34%;
+    top: 40%;
   }
 
   .button-buy {
@@ -680,12 +727,12 @@ h3 {
   }
 
   .button-svg {
-    left: 70%;
-    top: 51%;
+    left: 69%;
+    top: 56%;
   }
 
   .button-svg-close {
-    left: 95%;
+    left: 100%;
     top: 22%;
   }
 
@@ -747,11 +794,11 @@ h3 {
 
   .container-header {
     margin: 0 auto;
-    max-width: 1280px;
-    padding-right: 115px;
+    max-width: 1080px;
+    padding-right: 15px;
     padding-bottom: 0px;
     padding-top: 37px;
-    padding-left: 115px;
+    padding-left: 50px;
     align-items: center;
     display: flex;
   }
@@ -775,7 +822,7 @@ h3 {
 
   .button--tablet {
     position: absolute;
-    left: 80%;
+    left: 83%;
     top: 44%;
   }
 
@@ -1098,9 +1145,22 @@ h3 {
   color: #d41443;
 }
 
+.filials__location:hover, .filials__location:focus {
+  background-color: #c7133e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
 .filials__franchise {
   color: #d41443;
   background: #ffffff;
+}
+.filials__franchise:hover, .filials__franchise:focus {
+  background-color: #ecebeb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .filials__link {
@@ -1365,10 +1425,14 @@ h3 {
   color: #d41443;
   background-color: #ffffff;
   padding-left: 37px;
+  padding-right: 17px;
   transition-duration: 400ms;
 }
 .how-it-made__link:hover, .how-it-made__link:focus {
   background-color: #ecebeb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .how-it-made__icon {
@@ -2026,23 +2090,23 @@ h3 {
   justify-content: space-between;
   padding-left: 20px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 767px) {
   .hero-page {
-    max-width: 480px;
+    width: 320px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
   .hero-page {
-    max-width: 768px;
+    width: 768px;
     margin: 0 auto;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 34px;
+    padding-right: 34px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-page {
-    max-width: 1280px;
+    width: 1080px;
     margin: 0 auto;
     padding-left: 77px;
     padding-right: 97px;
@@ -2130,8 +2194,7 @@ h3 {
 }
 
 .hero__decor {
-  padding-top: 94px;
-  padding-right: 5px;
+  padding-top: 100px;
   font-family: DM Sans;
   font-style: normal;
   font-weight: normal;
@@ -2145,7 +2208,7 @@ h3 {
 }
 @media screen and (min-width: 1200px) {
   .hero__decor {
-    padding-top: 156px;
+    padding-top: 170px;
     font-size: 14px;
     line-height: 1.29;
   }
@@ -2154,6 +2217,12 @@ h3 {
 .hero__decor-box {
   display: flex;
   flex-direction: column;
+  padding-right: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__decor-box {
+    padding-right: 14px;
+  }
 }
 
 .hero__decor-item {

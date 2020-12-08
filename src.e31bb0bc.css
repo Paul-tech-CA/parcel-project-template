@@ -746,7 +746,6 @@ h3 {
   .button-buy {
     width: 160px;
     height: 44px;
-    margin-top: 30px;
   }
 
   .nav-container {
@@ -2100,7 +2099,7 @@ h3 {
   align-items: flex-end;
   position: absolute;
   bottom: 26px;
-  left: 34px;
+  left: 36px;
 }
 @media screen and (max-width: 767px) {
   .hero__description {

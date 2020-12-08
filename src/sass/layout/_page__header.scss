@@ -69,10 +69,12 @@
   fill: #d41443;
 }
 .button__header-close {
-  display: flex;
-  justify-content: center;
+  display: block;
   border: none;
   background-color: transparent;
+  margin-left: auto;
+  margin-right: 28px;
+  margin-top: 0px;
 }
 .button__header-close .icon--close {
   border: none;
@@ -99,6 +101,7 @@
 .button--wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 23px;
   margin-bottom: 32px;
 }
 .buy-arow {

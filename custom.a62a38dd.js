@@ -141,11 +141,11 @@ $(document).ready(function () {
 
     var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
 
-    if (w_top + 750 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+    if (w_top + 830 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
       $('.how-it-made__number').css('opacity', '1');
       $('.how-it-made__number').spincrement({
         thousandSeparator: "",
-        duration: 2300
+        duration: 2500
       });
       show = false;
     }
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52151" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53925" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

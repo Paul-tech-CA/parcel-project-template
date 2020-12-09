@@ -25,9 +25,11 @@
   &__title {
     position: relative;
     font-family: Titan One;
+    font-size: 20px;
     font-weight: 400;
-    text-align: center;
+    line-height: 1.15;
     letter-spacing: 0.04em;
+    text-align: center;
     text-transform: uppercase;
     color: $text-color-secondary;
     user-select: none;
@@ -92,7 +94,6 @@
 }
 
 .products__content-box {
-  // max-width: 200px;
   padding: 161px 40px 41px;
   margin: 0 auto;
 }

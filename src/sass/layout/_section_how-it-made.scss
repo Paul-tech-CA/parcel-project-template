@@ -4,6 +4,9 @@
   color: $text-color-black-primary;
   font-weight: 500;
   position: relative;
+  & h2 {
+    text-align: center;
+  }
 }
 
 .how-it-made__picture {
